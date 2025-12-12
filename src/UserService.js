@@ -25,4 +25,6 @@ class UserService {
     }
 }
 
-export default new UserService();
+// New (named variable)
+const userService = new UserService();
+export default userService;
