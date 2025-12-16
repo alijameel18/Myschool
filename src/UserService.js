@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = "https://myschool1-production.up.railway.app/api/v1/users";
+const API_BASE_URL = "process.env.REACT_APP_API_BASE_URL";
 
 class UserService {
 
@@ -24,6 +24,7 @@ class UserService {
         return axios.delete(API_BASE_URL + '/' + userId);
     }
 }
+console.log(API_BASE_URL);
 
 // New (named variable)
 const userService = new UserService();
